@@ -1,0 +1,126 @@
+.home_container {
+  height: 100vh;
+
+  .header_container {
+    display: flex;
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    min-height: 88px;
+
+    .container_one {
+      flex-basis: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #f5f5f5;
+
+      img {
+        width: 55px;
+        height: 23px;
+      }
+    }
+
+    .container_two {
+      flex-basis: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        color: #f5f5f5;
+        text-align: center;
+        font-family: Sora;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 100;
+
+        span {
+          color: #dec649;
+          font-family: Sora;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .home_hero {
+    display: flex;
+    width: 100%;
+    max-height: 350px;
+    gap: 40px;
+    border-bottom: 1px solid #f5f5f5;
+
+    .hero_container_one {
+      display: flex;
+      flex-basis: 80%;
+      align-items: center;
+
+      .socials_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        flex-basis: 13%;
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .intro_container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-basis: 87%;
+        padding-top: 40px;
+
+        .name {
+          color: #f5f5f5;
+          font-family: Sora;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+        }
+
+        p {
+          color: #f5f5f5;
+          font-family: Sora;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 100;
+          line-height: 191.721%;
+          max-width: 853px;
+
+          span {
+            color: #dec649;
+            font-family: Sora;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .hero_container_two {
+      flex-basis: 20%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: 2s;
+        cursor: pointer;
+
+        &:hover {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}

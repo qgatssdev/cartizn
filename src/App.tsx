@@ -1,10 +1,11 @@
+import Home from './pages/home';
 import './App.scss';
 
 function App() {
   return (
-    <>
-      <p>ss</p>
-    </>
+    <div className='container'>
+      <Home />
+    </div>
   );
 }
 
