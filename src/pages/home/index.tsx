@@ -1,11 +1,14 @@
 import Carousel from '../../components/carousel';
+import CrossfadeCarousel from '@notbaldrick/react-crossfade-carousel';
 import './styles.scss';
 
 const Home = () => {
   const test = [
+    require('../../assets/ayra.png'),
     require('../../assets/rema.png'),
-    require('../../assets/girl1.png'),
+    require('../../assets/carti.png'),
   ];
+
   return (
     <div className='home_main_container'>
       <div className='home_container'>
@@ -56,7 +59,12 @@ const Home = () => {
           <div className='section_one'>
             <div className='image_container_one'>
               {/* <img src={require('../../assets/rema.png')} alt='' /> */}
-              <Carousel images={test} />
+              {/* <Carousel images={test} /> */}
+              {/* <CrossfadeCarousel
+                interval={3000}
+                transition={2000}
+                images={test}
+              /> */}
             </div>
             <div className='image_container_two'>
               <div className='container_image_one'>
