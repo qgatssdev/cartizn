@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './styles.scss';
 
 type Props = {
   timeInterval?: number;
@@ -8,14 +9,14 @@ type Props = {
 const Carousel = ({ images }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-//   const nextImage = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-//   };
+  //   const nextImage = () => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 0);
     return () => clearInterval(interval);
   }, []);
 

@@ -1,10 +1,23 @@
 .carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
   width: 100%;
-  height: auto;
+  height: 100%;
+  animation: fadeInOut 3s linear infinite;
 }
 
 .carousel-image.visible {
   opacity: 1;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
