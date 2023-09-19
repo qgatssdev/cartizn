@@ -6,32 +6,29 @@ type Props = {
   images: string[];
 };
 
-const Carousel = ({ images }: Props) => {
+const Carousel = ({ images, timeInterval }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  //   const nextImage = () => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   };
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 0);
+      setVisible(false); // Start the fade-out animation
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setVisible(true); // Start the fade-in animation
+      }, 500); // Adjust the timeout to match your CSS transition duration
+    }, timeInterval);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Image ${index}`}
-          className={`carousel-image ${
-            index === currentIndex ? 'visible' : ''
-          }`}
-        />
-      ))}
+      <img
+        src={images[currentIndex]}
+        alt=''
+        className={`carousel-image ${visible ? 'visible' : 'hidden'}`}
+      />
     </>
   );
 };
