@@ -1,12 +1,35 @@
 import Carousel from '../../components/carousel';
-import CrossfadeCarousel from '@notbaldrick/react-crossfade-carousel';
 import './styles.scss';
 
 const Home = () => {
-  const test = [
+  const imageContainerOne = [
     require('../../assets/ayra.png'),
     require('../../assets/rema.png'),
     require('../../assets/carti.png'),
+  ];
+
+  const imageContainerTwo = [
+    require('../../assets/girl1.png'),
+    require('../../assets/girl2.png'),
+    require('../../assets/girl3.png'),
+  ];
+
+  const imageContainerThree = [
+    require('../../assets/girl2.png'),
+    require('../../assets/girl3.png'),
+    require('../../assets/girl1.png'),
+  ];
+
+  const imageContainerFour = [
+    require('../../assets/girl3.png'),
+    require('../../assets/ayra.png'),
+    require('../../assets/rema.png'),
+  ];
+
+  const imageContainerFive = [
+    require('../../assets/girl2.png'),
+    require('../../assets/girl1.png'),
+    require('../../assets/girl3.png'),
   ];
 
   return (
@@ -58,29 +81,23 @@ const Home = () => {
         <div className='home_section'>
           <div className='section_one'>
             <div className='image_container_one'>
-              {/* <img src={require('../../assets/rema.png')} alt='' /> */}
-              {/* <Carousel images={test} /> */}
-              {/* <CrossfadeCarousel
-                interval={3000}
-                transition={2000}
-                images={test}
-              /> */}
+              <Carousel images={imageContainerOne} timeInterval={28000} />
             </div>
             <div className='image_container_two'>
               <div className='container_image_one'>
                 <div className='con_1'>
-                  <img src={require('../../assets/girl1.png')} alt='' />
+                  <Carousel images={imageContainerTwo} timeInterval={22000} />
                 </div>
                 <div className='con_2'>
-                  <img src={require('../../assets/girl2.png')} alt='' />
+                  <Carousel images={imageContainerThree} timeInterval={10000} />
                 </div>
               </div>
               <div className='container_image_two'>
                 <div className='con_3'>
-                  <img src={require('../../assets/girl3.png')} alt='' />
+                  <Carousel images={imageContainerFour} timeInterval={17000} />
                 </div>
                 <div className='con_4'>
-                  <img src={require('../../assets/ayra.png')} alt='' />
+                  <Carousel images={imageContainerFive} timeInterval={27000} />
                 </div>
               </div>
             </div>
