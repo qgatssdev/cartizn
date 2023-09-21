@@ -29,7 +29,7 @@ const Home = () => {
   const imageContainerFive = [
     require('../../assets/girl2.png'),
     require('../../assets/girl1.png'),
-    // require('../../assets/girl3.png'),
+    require('../../assets/girl3.png'),
   ];
 
   return (
