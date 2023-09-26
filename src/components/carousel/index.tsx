@@ -12,11 +12,11 @@ const Carousel = ({ images, timeInterval }: Props) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false); // Start the fade-out animation
+      setVisible(false); 
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setVisible(true); // Start the fade-in animation
-      }, 500); // Adjust the timeout to match your CSS transition duration
+        setVisible(true);
+      }, 500);
     }, timeInterval);
 
     return () => clearInterval(interval);
