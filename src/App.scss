@@ -3,6 +3,7 @@
   mix-blend-mode: overlay;
   background-size: contain;
   overflow: hidden;
+  scroll-behavior: smooth;
 
   &::after {
     background: url('./assets/Light\ Noise.png');
