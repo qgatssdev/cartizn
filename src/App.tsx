@@ -5,7 +5,6 @@ import gsap from 'gsap';
 import { Observer } from 'gsap/Observer';
 import './App.scss';
 gsap.registerPlugin(Observer);
-//
 
 function App() {
   const section1Ref = useRef(null);
