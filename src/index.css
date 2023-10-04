@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
 @font-face {
-  font-family: "Qarkine";
-  src: local("Qarkine"),
-   url("./font/QarkinePersonalUse-ZVvn3.ttf") format("truetype");
- }
-
+  font-family: 'Qarkine';
+  src: local('Qarkine'),
+    url('./font/QarkinePersonalUse-ZVvn3.ttf') format('truetype');
+}
 
 html,
 body,
@@ -98,4 +97,8 @@ video {
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
