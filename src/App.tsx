@@ -1,25 +1,41 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Home from './pages/home';
 import Events from './pages/events';
 import gsap from 'gsap';
-import { Observer } from 'gsap/Observer';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './App.scss';
-gsap.registerPlugin(Observer);
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
+  const eventsRef = useRef<HTMLDivElement>(null);
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
-  Observer.create({
-    
-  })
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY) {
+        window.scrollTo({
+          top: eventsRef.current?.getBoundingClientRect().bottom,
+          behavior: 'auto',
+        });
+      }
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY]);
 
   return (
     <div className='container'>
-      <div ref={section1Ref}>
+      <div className='section'>
         <Home />
       </div>
-      <div ref={section2Ref}>
+      <div className='section' ref={eventsRef}>
         <Events />
       </div>
     </div>
