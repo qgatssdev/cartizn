@@ -6,8 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './App.scss';
 gsap.registerPlugin(ScrollTrigger);
 
-//
-
 function App() {
   const eventsRef = useRef<HTMLDivElement>(null);
   const [prevScrollY, setPrevScrollY] = useState(0);
