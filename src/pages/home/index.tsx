@@ -1,37 +1,14 @@
 import Carousel from '../../components/carousel';
+import {
+  imageContainerFive,
+  imageContainerFour,
+  imageContainerOne,
+  imageContainerThree,
+  imageContainerTwo,
+} from './images';
 import './styles.scss';
 
 const Home = () => {
-  const imageContainerOne = [
-    require('../../assets/ayra.png'),
-    require('../../assets/rema.png'),
-    require('../../assets/carti.png'),
-  ];
-
-  const imageContainerTwo = [
-    require('../../assets/girl1.png'),
-    require('../../assets/girl2.png'),
-    require('../../assets/girl3.png'),
-  ];
-
-  const imageContainerThree = [
-    require('../../assets/girl2.png'),
-    require('../../assets/girl3.png'),
-    require('../../assets/girl1.png'),
-  ];
-
-  const imageContainerFour = [
-    require('../../assets/girl3.png'),
-    require('../../assets/ayra.png'),
-    require('../../assets/rema.png'),
-  ];
-
-  const imageContainerFive = [
-    require('../../assets/girl2.png'),
-    require('../../assets/girl1.png'),
-    require('../../assets/girl3.png'),
-  ];
-
   return (
     <div className='home_main_container'>
       <div className='home_container'>
