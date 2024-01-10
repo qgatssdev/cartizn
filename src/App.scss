@@ -4,6 +4,10 @@
   background-size: contain;
   overflow: hidden;
 
+  .section {
+    height: 100vh;
+  }
+
   &::after {
     background: url('./assets/Light\ Noise.png');
     animation: grain 8s steps(10) infinite;
