@@ -10,6 +10,8 @@ function App() {
   const eventsRef = useRef<HTMLDivElement>(null);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
+  //
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
