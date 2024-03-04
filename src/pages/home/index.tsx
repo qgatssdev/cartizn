@@ -8,8 +8,6 @@ import {
 } from './images';
 import './styles.scss';
 
-//
-
 const Home = () => {
   return (
     <div className='home_main_container'>
